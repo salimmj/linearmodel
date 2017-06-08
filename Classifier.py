@@ -53,3 +53,4 @@ class LinearClassifier:
         clf = make_pipeline(preprocessing.StandardScaler(), svm.LinearSVC())
         scores = cross_val_score(clf, self.cell_X, self.cell_y, cv=20)
         return scores.mean()
+ 
