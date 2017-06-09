@@ -17,7 +17,7 @@ class CFG(object):
 	def __init__(self):
 		self.prod = defaultdict(list)
 
-	def add_prod(self, lhs, rhs):
+	def add_prod_rule(self, lhs, rhs):
 
 		prod_rules = rhs.split('|')
 
