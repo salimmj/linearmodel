@@ -23,7 +23,7 @@ class FS_Model:
         self.n_cells = n_cells
 
         # Creates Classifier instance which trains on model (for each feature separately)
-        self.TrainedClassifier = Classifier(model, feature_list, n_cells)
+        self.TrainedClassifier = Classifier(self.model, self.feature_list, self.n_cells)
 
         self.cell_scores = self.get_scores()
 

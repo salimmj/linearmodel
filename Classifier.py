@@ -27,7 +27,7 @@ class Classifier:
         self.n_cells = n_cells
 
         # list of cells. each cell is a list of features. each feature is a linear classifier
-        self.trained_classifiers = [[LinearClassifier(self.model_data[0][cell][i], self.model_data[1][cell][i], impulse_feature)
+        self.trained_classifiers = [[LinearClassifier(self.model_data[0][cell][i], self.model_data[1][i], impulse_feature)
                                      for i, impulse_feature in enumerate(self.feature_list)] for cell in range(n_cells)]
 
         self.scores = np.array([ [ feature.score for feature in cell_clf ] for cell_clf in self.trained_classifiers ])
